@@ -1,0 +1,55 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/nf-core/modules/master/modules/meta-schema.json
+name: "repeatmasker"
+## TODO nf-core: Add a description of the module and list keywords
+description: write your description here
+keywords:
+  - sort
+  - example
+  - genomics
+tools:
+  - "repeatmasker":
+      ## TODO nf-core: Add a description and other details for the software below
+      description: "RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences."
+      homepage: "https://www.repeatmasker.org/RepeatMasker"
+      documentation: "https://www.repeatmasker.org/RepeatMasker"
+      tool_dev_url: "https://github.com/Dfam-consortium/RepeatMasker"
+      doi: ""
+      licence: ["Open Software License v2.1"]
+      identifier:
+
+## TODO nf-core: Add a description of all of the variables used as input
+input:
+  #
+  ## TODO nf-core: Delete / customise this example input
+  - fasta:
+      type: file
+      description: Genome FASTA file
+      pattern: "*.{fasta, fa, fna}"
+      ontologies:
+        - edam: "http://edamontology.org/format_1929" # BAM
+
+## TODO nf-core: Add a description of all of the variables used as output
+output:
+  - bam:
+      #
+      ## TODO nf-core: Delete / customise this example output
+      - "*.bam":
+          type: file
+          description: Sorted BAM/CRAM/SAM file
+          pattern: "*.{bam,cram,sam}"
+          ontologies:
+            - edam: "http://edamontology.org/format_2572" # BAM
+            - edam: "http://edamontology.org/format_2573" # CRAM
+            - edam: "http://edamontology.org/format_3462" # SAM
+
+  - versions:
+      - "versions.yml":
+          type: file
+          description: File containing software versions
+          pattern: "versions.yml"
+
+authors:
+  - "@lukekoch"
+maintainers:
+  - "@lukekoch"

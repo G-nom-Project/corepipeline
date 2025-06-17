@@ -3,10 +3,7 @@
     "homePage": "https://github.com/G-nom-Project/corepipeline",
     "repos": {
         "https://github.com/nf-core/modules.git": {
-            "modules": {
-                "nf-core": {
-                }
-            },
+            "modules": {},
             "subworkflows": {
                 "nf-core": {
                     "utils_nextflow_pipeline": {
